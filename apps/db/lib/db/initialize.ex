@@ -1,7 +1,7 @@
 defmodule Db.Initialize do
   NimbleCSV.define(MyParser, separator: [","], new_lines: ["\r", "\r\n", "\n"])
 
-  def load_restaurants do
+  def load_restaurant do
     "restaurants.csv"
     |> file_path(:db)
     |> File.stream!()
@@ -29,6 +29,26 @@ defmodule Db.Initialize do
     end)
     |> Enum.each(fn param ->
       Db.Repo.insert!(struct(Db.Model.Restaurant, param), on_conflict: :nothing)
+    end)
+  end
+
+  def load_dish do
+    restaurants = Db.Repo.all(Db.Model.Restaurant)
+
+    "dish.csv"
+    |> file_path(:db)
+    |> File.stream!()
+    |> MyParser.parse_stream()
+    |> Stream.map(fn [restaurant, name, image_url, type] ->
+      %{
+        name: name,
+        image_url: image_url,
+        type: type,
+        restaurant_id: Enum.find(restaurants, &(&1.name == restaurant)).id
+      }
+    end)
+    |> Enum.each(fn param ->
+      Db.Repo.insert!(struct(Db.Model.Dish, param), on_conflict: :nothing)
     end)
   end
 
