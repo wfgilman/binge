@@ -1,16 +1,52 @@
 defmodule ApiWeb.ErrorView do
   use ApiWeb, :view
 
-  # If you want to customize a particular status code
-  # for a certain format, you may uncomment below.
-  # def render("500.json", _assigns) do
-  #   %{errors: %{detail: "Internal Server Error"}}
-  # end
+  def render("404.json", %{message: message}) do
+    %{
+      code: "not_found_error",
+      message: message
+    }
+  end
 
-  # By default, Phoenix returns the status message from
-  # the template name. For example, "404.json" becomes
-  # "Not Found".
+  def render("404.json", _assigns) do
+    %{
+      code: "not_found_error",
+      message: "We couldn't find the resource you requested."
+    }
+  end
+
+  def render("500.json", _assigns) do
+    %{
+      code: "api_error",
+      message: "Your request couldn't be processed."
+    }
+  end
+
+  def render("query_params.json", _assigns) do
+    %{
+      code: "invalid_request_error",
+      message: "The query parameters you specified are invalid."
+    }
+  end
+
+  def render("changeset.json", %{data: %Ecto.Changeset{} = changeset}) do
+    %{
+      code: "validation_error",
+      message: ApiWeb.ErrorHelpers.error_string_from_changeset(changeset)
+    }
+  end
+
+  def render("rate_limit.json", _assigns) do
+    %{
+      code: "rate_limit_error",
+      message: "You sent too many requests too fast. Slow down!"
+    }
+  end
+
   def template_not_found(template, _assigns) do
-    %{errors: %{detail: Phoenix.Controller.status_message_from_template(template)}}
+    %{
+      code: "template_not_found",
+      message: Phoenix.Controller.status_message_from_template(template)
+    }
   end
 end
