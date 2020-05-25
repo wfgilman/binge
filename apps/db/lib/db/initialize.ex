@@ -1,6 +1,13 @@
 defmodule Db.Initialize do
   NimbleCSV.define(MyParser, separator: [","], new_lines: ["\r", "\r\n", "\n"])
 
+  def load_all do
+    Db.Repo.delete_all(Db.Model.Dish)
+    Db.Repo.delete_all(Db.Model.Restaurant)
+    load_restaurant()
+    load_dish()
+  end
+
   def load_restaurant do
     "restaurants.csv"
     |> file_path(:db)
@@ -35,7 +42,7 @@ defmodule Db.Initialize do
   def load_dish do
     restaurants = Db.Repo.all(Db.Model.Restaurant)
 
-    "dish.csv"
+    "dishes.csv"
     |> file_path(:db)
     |> File.stream!()
     |> MyParser.parse_stream()
