@@ -9,5 +9,6 @@ defmodule ApiWeb.Router do
     pipe_through :api
 
     get "/dishes", DishController, :index
+    post "/dishes/action", DishActionController, :create
   end
 end
