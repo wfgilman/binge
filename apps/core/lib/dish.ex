@@ -11,14 +11,15 @@ defmodule Core.Dish do
 
   def get_likes(user_id) do
     dish_ids =
-      :ets.match(:dish_likes, {{user_id, :"_"}, {:"$1", :"_"}})
+      :ets.match(:dish_likes, {{user_id, :_}, {:"$1", :_}})
       |> List.flatten()
 
     Db.Repo.all(
       from(d in Db.Model.Dish,
         join: r in assoc(d, :restaurant),
         preload: [restaurant: r],
-        where: d.id in ^dish_ids)
+        where: d.id in ^dish_ids
+      )
     )
   end
 end

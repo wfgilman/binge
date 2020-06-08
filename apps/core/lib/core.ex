@@ -7,7 +7,8 @@ defmodule Core do
       [
         supervisor(Eternal, [:dish_likes, [:set]])
       ],
-      [strategy: :one_for_one, name: Core.Supervisor]
+      strategy: :one_for_one,
+      name: Core.Supervisor
     )
   end
 end

@@ -30,6 +30,7 @@ defmodule Db.MixProject do
       {:ecto_sql, "~> 3.0"},
       {:postgrex, "~> 0.14"},
       {:nimble_csv, "~> 0.5"},
+      {:ecto_enum, "~> 1.4"},
       {:shared, in_umbrella: true}
     ]
   end

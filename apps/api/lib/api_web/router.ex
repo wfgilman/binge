@@ -5,10 +5,24 @@ defmodule ApiWeb.Router do
     plug :accepts, ["json"]
   end
 
+  pipeline :api_auth do
+    plug :accepts, ["json"]
+    plug Api.AuthPipeline
+  end
+
   scope "/api/v1", ApiWeb do
     pipe_through :api
 
     get "/dishes", DishController, :index
     post "/dishes/action", DishActionController, :create
+    post "/users", UserController, :create
+    post "/users/action", UserActionController, :create
+    patch "/users/action", UserActionController, :update
+  end
+
+  scope "/api/v1", ApiWeb do
+    pipe_through :api_auth
+
+    post "/users/invite", UserController, :create
   end
 end

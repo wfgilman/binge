@@ -43,6 +43,27 @@ defmodule ApiWeb.ErrorView do
     }
   end
 
+  def render("twilio.json", %{message: message}) do
+    %{
+      code: "sms_error",
+      message: message
+    }
+  end
+
+  def render("invalid_code.json", _assigns) do
+    %{
+      code: "validation_error",
+      message: "Sorry, that code is invalid or expired."
+    }
+  end
+
+  def render("token.json", %{message: message}) do
+    %{
+      code: "authentication_error",
+      message: "Invalid access token. #{message}"
+    }
+  end
+
   def template_not_found(template, _assigns) do
     %{
       code: "template_not_found",
