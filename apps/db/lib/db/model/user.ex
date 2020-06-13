@@ -10,7 +10,7 @@ defmodule Db.Model.User do
     field(:verify_code, :string)
     field(:verify_expiry, :integer)
     field(:status, Db.Enum.UserStatus)
-    belongs_to(:match_user, Db.Model.User)
+    belongs_to(:friend, Db.Model.User)
     timestamps()
   end
 
@@ -24,7 +24,7 @@ defmodule Db.Model.User do
       :verify_code,
       :verify_expiry,
       :status,
-      :match_user_id
+      :friend_id
     ])
     |> validate_required([:first_name, :phone, :status])
     |> validate_length(:phone, is: 10)

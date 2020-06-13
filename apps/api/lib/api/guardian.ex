@@ -6,11 +6,16 @@ defmodule Api.Guardian do
   def subject_for_token(_, _), do: {:error, "Unknown resource type."}
 
   def resource_from_claims(%{"sub" => "User:" <> id} = _claims) do
-    user = Db.Repo.get(Db.Model.User, id)
-    {:ok, user}
+    case Db.Repo.get(Db.Model.User, id) do
+      nil ->
+        {:error, "Authorized user doesn't exist."}
+
+      user ->
+        {:ok, user}
+    end
   end
 
   def resource_from_claims(_claims) do
-    {:error, "User not found."}
+    {:error, "Invalid access token."}
   end
 end

@@ -10,7 +10,7 @@ defmodule Db.Repo.Migrations.CreateTableUser do
       add :verify_code, :string
       add :verify_expiry, :bigint
       add :status, :integer, null: false
-      add :match_user_id, references(:user)
+      add :friend_id, references(:user, on_delete: :nilify_all)
       timestamps()
     end
 

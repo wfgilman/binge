@@ -23,6 +23,9 @@ defmodule ApiWeb.Router do
   scope "/api/v1", ApiWeb do
     pipe_through :api_auth
 
-    post "/users/invite", UserController, :create
+    post "/users/invite", UserController, :invite
+    get "/users", UserController, :show
+    get "/users/friends", UserController, :index
+    delete "/users", UserController, :delete
   end
 end

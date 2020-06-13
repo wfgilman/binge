@@ -1,29 +1,27 @@
 defmodule Core.User do
   import Ecto.Query
 
+  @type key :: String.t() | atom
+
   @verify_code_ttl {5, :minutes}
 
   @spec create(%{String.t() => String.t()}) ::
           {:ok, Db.Model.User.t()} | {:error, Ecto.Changeset.t()}
   def create(params) do
-    params
-    |> check_if_invited()
-    |> Db.Model.User.changeset(params)
-    |> Db.Repo.insert_or_update()
-  end
-
-  defp check_if_invited(%{"phone" => phone}) do
-    case lookup_by_phone(phone) do
+    case Db.Repo.get_by(Db.Model.User, phone: params["phone"]) do
       nil ->
         %Db.Model.User{}
+        |> Db.Model.User.changeset(params)
+        |> Db.Repo.insert()
+
+      %{status: :invited} = user ->
+        user
+        |> Db.Model.User.changeset(params)
+        |> Db.Repo.update()
 
       user ->
-        user
+        {:ok, user}
     end
-  end
-
-  defp lookup_by_phone(phone) do
-    Db.Repo.get_by(Db.Model.User, phone: phone)
   end
 
   @spec generate_verification_code(integer | String.t()) :: Db.Model.User.t() | no_return
@@ -61,5 +59,13 @@ defmodule Core.User do
       where: u.verify_expiry > ^:os.system_time(:seconds)
     )
     |> Db.Repo.one()
+  end
+
+  @spec update(Db.Model.User.t(), %{key => String.t()}) ::
+          {:ok, Db.Model.User.t()} | {:error, Ecto.Changeset.t()}
+  def update(user, params) do
+    user
+    |> Ecto.Changeset.change(params)
+    |> Db.Repo.update()
   end
 end
