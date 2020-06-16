@@ -25,6 +25,7 @@ defmodule ApiWeb.Router do
 
     post "/users/invite", UserController, :invite
     get "/users", UserController, :show
+    patch "/users", UserController, :update
     get "/users/friends", UserController, :index
     delete "/users", UserController, :delete
   end

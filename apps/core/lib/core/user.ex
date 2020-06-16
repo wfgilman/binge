@@ -65,7 +65,7 @@ defmodule Core.User do
           {:ok, Db.Model.User.t()} | {:error, Ecto.Changeset.t()}
   def update(user, params) do
     user
-    |> Ecto.Changeset.change(params)
+    |> Db.Model.User.changeset(params)
     |> Db.Repo.update()
   end
 end

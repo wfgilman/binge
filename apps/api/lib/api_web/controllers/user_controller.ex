@@ -62,6 +62,21 @@ defmodule ApiWeb.UserController do
     end
   end
 
+  def update(conn, params) do
+    user = Guardian.Plug.current_resource(conn)
+
+    case Core.User.update(user, params) do
+      {:ok, _} ->
+        send_resp(conn, 204, "")
+
+      {:error, changeset} ->
+        conn
+        |> put_status(422)
+        |> put_view(ApiWeb.ErrorView)
+        |> render("changeset.json", data: changeset)
+    end
+  end
+
   def delete(conn, _params) do
     user = Guardian.Plug.current_resource(conn)
     Db.Repo.delete!(user)
