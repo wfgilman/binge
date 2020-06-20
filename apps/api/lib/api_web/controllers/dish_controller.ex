@@ -1,21 +1,27 @@
 defmodule ApiWeb.DishController do
   use ApiWeb, :controller
 
-  def index(conn, %{"filter" => "likes"}) do
-    data = Core.Dish.get_likes("bg")
-
+  def index(conn, _params) do
     conn
     |> put_status(200)
     |> put_view(ApiWeb.DishView)
-    |> render("index.json", data: data)
+    |> render("index.json", data: Core.Dish.list())
   end
 
-  def index(conn, _params) do
+  def list(conn, params) do
+    user = Guardian.Plug.current_resource(conn)
+
     data =
-      Db.Model.Dish
-      |> Db.Repo.all()
-      |> Db.Repo.preload(:restaurant)
-      |> Enum.shuffle()
+      case params["filter"] do
+        nil ->
+          Core.Dish.list(user)
+
+        "likes" ->
+          Core.Dish.get_likes(user)
+
+        "matches" ->
+          Core.Dish.get_matches(user)
+      end
 
     conn
     |> put_status(200)

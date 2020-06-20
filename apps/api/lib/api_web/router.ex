@@ -14,7 +14,6 @@ defmodule ApiWeb.Router do
     pipe_through :api
 
     get "/dishes", DishController, :index
-    post "/dishes/action", DishActionController, :create
     post "/users", UserController, :create
     post "/users/action", UserActionController, :create
     patch "/users/action", UserActionController, :update
@@ -26,7 +25,9 @@ defmodule ApiWeb.Router do
     post "/users/invite", UserController, :invite
     get "/users", UserController, :show
     patch "/users", UserController, :update
-    get "/users/friends", UserController, :index
     delete "/users", UserController, :delete
+    get "/users/dishes", DishController, :list
+    post "/users/dishes/action", DishActionController, :create
+    get "/users/friends", UserController, :index
   end
 end
