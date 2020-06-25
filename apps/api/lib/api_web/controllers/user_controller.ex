@@ -6,7 +6,9 @@ defmodule ApiWeb.UserController do
 
     with {:ok, friend} <- Core.User.create(params),
          {:ok, _} <- Core.Match.create(user, friend),
-         {:ok, _} <- Core.User.update(user, %{friend_id: friend.id}) do
+         {:ok, _} <- Core.User.update(user, %{friend_id: friend.id}),
+         sms = %Notify.SMS{type: "sms_invite", args: [user, friend]},
+         {:ok, _} <- Notification.send(sms) do
       send_resp(conn, 204, "")
     else
       {:error, changeset} ->
@@ -14,6 +16,12 @@ defmodule ApiWeb.UserController do
         |> put_status(422)
         |> put_view(ApiWeb.ErrorView)
         |> render("changeset.json", data: changeset)
+
+      {:error, message, _} ->
+        conn
+        |> put_status(400)
+        |> put_view(ApiWeb.ErrorView)
+        |> render("twilio.json", message: message)
     end
   end
 

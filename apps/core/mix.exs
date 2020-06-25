@@ -27,6 +27,7 @@ defmodule Core.MixProject do
   defp deps do
     [
       {:eternal, "~> 1.2"},
+      {:ex2ms, "~> 1.0"},
       {:db, in_umbrella: true},
       {:shared, in_umbrella: true}
     ]

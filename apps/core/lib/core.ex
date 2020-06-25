@@ -5,7 +5,8 @@ defmodule Core do
   def start(_, _) do
     Supervisor.start_link(
       [
-        supervisor(Eternal, [:dish_likes, [:set]])
+        supervisor(Eternal, [:dish_likes, [:set]]),
+        worker(Core.DishServer, [])
       ],
       strategy: :one_for_one,
       name: Core.Supervisor

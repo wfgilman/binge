@@ -11,7 +11,11 @@ defmodule ApiWeb.DishView do
         match: dish.match,
         restaurant_id: dish.restaurant.id,
         restaurant_name: dish.restaurant.name,
-        doordash_url: dish.restaurant.doordash_url
+        restaurant_match: dish.restaurant.match,
+        doordash_url: dish.restaurant.doordash_url,
+        website_url: dish.restaurant.website,
+        phone: dish.restaurant.phone,
+        ubereats_url: nil
       }
     end)
   end

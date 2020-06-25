@@ -8,6 +8,7 @@ defmodule Db.Model.Restaurant do
     field(:phone, :string)
     field(:website, :string)
     field(:doordash_url, :string)
+    field(:match, :boolean, virtual: true, default: false)
     timestamps()
   end
 end

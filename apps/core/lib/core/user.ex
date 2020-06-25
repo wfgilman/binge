@@ -1,5 +1,6 @@
 defmodule Core.User do
   import Ecto.Query
+  import Shared
 
   @type key :: String.t() | atom
 
@@ -34,8 +35,6 @@ defmodule Core.User do
     |> Ecto.Changeset.change(%{verify_code: code, verify_expiry: expiry})
     |> Db.Repo.update!()
   end
-
-  defp to_seconds({min, :minutes}), do: min * 60
 
   @spec verify_user(Db.Model.User.t(), String.t()) :: boolean
   def verify_user(user, code) do
