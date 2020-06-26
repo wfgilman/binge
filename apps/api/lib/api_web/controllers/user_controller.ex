@@ -3,6 +3,7 @@ defmodule ApiWeb.UserController do
 
   def invite(conn, params) do
     user = Guardian.Plug.current_resource(conn)
+    params = Map.put(params, "friend_id", user.id)
 
     with {:ok, friend} <- Core.User.create(params),
          {:ok, _} <- Core.Match.create(user, friend),
