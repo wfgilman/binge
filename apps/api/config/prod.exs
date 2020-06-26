@@ -13,8 +13,8 @@ config :api, ApiWeb.Endpoint,
   http: [:inet6, port: System.get_env("PORT") || 4000],
   url: [host: "example.com", port: 80],
   server: true,
-  secret_key_base: "${PHX_SECRET_KEY_BASE}",
-  instrumenters: [Appsignal.Phoenix.Instrumenter]
+  secret_key_base: "${SECRET_KEY_BASE}",
+  instrumenters: [Appsignal.Phoenix.Instrumenter],
   version: Mix.Project.config[:version]
 
 # Do not print debug messages in production
