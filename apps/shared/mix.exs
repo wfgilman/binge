@@ -25,8 +25,9 @@ defmodule Shared.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:appsignal, "~> 1.0"},
-      # {:jason, "~> 1.1"}
+      {:appsignal, "~> 1.0"},
+      {:jason, "~> 1.1"},
+      {:distillery, "~> 2.1"}
     ]
   end
 end

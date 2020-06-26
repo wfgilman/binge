@@ -1,5 +1,4 @@
 defmodule Shared do
-
   def to_seconds({sec, :second}), do: sec
   def to_seconds({sec, :seconds}), do: sec
   def to_seconds({min, :minute}), do: min * 60

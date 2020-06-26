@@ -31,5 +31,4 @@ defmodule Core.DishServer do
 
   @impl true
   def handle_info(_msg, state), do: {:noreply, state}
-
 end

@@ -4,13 +4,12 @@ defmodule Db do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
-    # Telemetry.attach(
-    #   "appsignal-ecto",
-    #   [:commuter, :repo, :query],
-    #   Appsignal.Ecto,
-    #   :handle_event,
-    #   nil
-    # )
+    :telemetry.attach(
+      "appsignal-ecto",
+      [:binge, :repo, :query],
+      &Appsignal.Ecto.handle_event/4,
+      nil
+    )
 
     children = [
       supervisor(Db.Repo, [])
