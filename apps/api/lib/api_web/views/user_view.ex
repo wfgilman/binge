@@ -18,7 +18,8 @@ defmodule ApiWeb.UserView do
       last_name: user.last_name,
       phone: user.phone,
       email: user.email,
-      status: user.status
+      status: user.status,
+      friend_id: user.friend_id
     }
   end
 end
