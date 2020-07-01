@@ -41,6 +41,7 @@ defmodule Core.Dish do
     )
     |> add_dish_matches(friend_dish_ids)
     |> add_restaurant_matches(friend_rest_ids)
+    |> sort()
   end
 
   defp add_dish_matches(dishes, dish_ids) do
@@ -52,6 +53,23 @@ defmodule Core.Dish do
   defp add_restaurant_matches(dishes, restaurant_ids) do
     Enum.map(dishes, fn dish ->
       put_in(dish.restaurant.match, Enum.any?(restaurant_ids, &(&1 == dish.restaurant_id)))
+    end)
+  end
+
+  defp sort(dishes) do
+    compare =
+      fn
+        x, x -> :eq
+        x, y when x > y -> :gt
+        _, _ -> :lt
+      end
+
+    Enum.sort(dishes, fn lhs, rhs ->
+      case {compare.(lhs.match, rhs.match), compare.(lhs.restaurant.name, rhs.restaurant.name)} do
+        {:gt, _} -> true
+        {:eq, :lt} -> true
+        {_, _} -> false
+      end
     end)
   end
 
@@ -79,6 +97,7 @@ defmodule Core.Dish do
     |> add_dish_matches(friend_dish_ids)
     |> add_restaurant_matches(friend_rest_ids)
     |> Enum.filter(&(&1.id in dish_ids))
+    |> sort()
   end
 
   defp get_dish_ids(nil), do: []
