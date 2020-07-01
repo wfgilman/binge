@@ -10,6 +10,8 @@ defmodule Db.Model.User do
     field(:verify_code, :string)
     field(:verify_expiry, :integer)
     field(:status, Db.Enum.UserStatus)
+    field(:device_token, :string)
+    field(:push_enabled, :boolean)
     belongs_to(:friend, Db.Model.User)
     timestamps()
   end
@@ -24,7 +26,9 @@ defmodule Db.Model.User do
       :verify_code,
       :verify_expiry,
       :status,
-      :friend_id
+      :friend_id,
+      :device_token,
+      :push_enabled
     ])
     |> validate_required([:first_name, :phone, :status])
     |> validate_length(:phone, is: 10)

@@ -15,13 +15,12 @@ config :api, ApiWeb.Endpoint,
   server: true,
   secret_key_base: "${SECRET_KEY_BASE}",
   instrumenters: [Appsignal.Phoenix.Instrumenter],
-  version: Mix.Project.config[:version]
+  version: Mix.Project.config()[:version]
 
 # Do not print debug messages in production
 config :logger, level: :info
 
-config :api, Api.Guardian,
-  secret_key: "${GUARDIAN_SECRET_KEY}"
+config :api, Api.Guardian, secret_key: "${GUARDIAN_SECRET_KEY}"
 
 # ## SSL Support
 #

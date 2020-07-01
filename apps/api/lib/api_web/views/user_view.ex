@@ -19,7 +19,8 @@ defmodule ApiWeb.UserView do
       phone: user.phone,
       email: user.email,
       status: user.status,
-      friend_id: user.friend_id
+      friend_id: user.friend_id,
+      push_enabled: user.push_enabled
     }
   end
 end
