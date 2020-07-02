@@ -18,7 +18,7 @@ defmodule Notify.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      applications: [:ex_twilio],
+      applications: [:ex_twilio, :pigeon],
       extra_applications: [:logger]
     ]
   end
