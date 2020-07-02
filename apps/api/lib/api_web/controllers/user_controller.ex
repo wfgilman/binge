@@ -18,11 +18,17 @@ defmodule ApiWeb.UserController do
         |> put_view(ApiWeb.ErrorView)
         |> render("changeset.json", data: changeset)
 
-      {:error, message, _} ->
+      {:error, %{"code" => 21211}, _code} ->
         conn
         |> put_status(400)
         |> put_view(ApiWeb.ErrorView)
-        |> render("twilio.json", message: message)
+        |> render("twilio.json", message: "Oops, that's not a valid number.")
+
+      {:error, resp, _code} ->
+        conn
+        |> put_status(400)
+        |> put_view(ApiWeb.ErrorView)
+        |> render("twilio.json", message: resp["message"] || "We couldn't send an invite to that number.")
     end
   end
 
