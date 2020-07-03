@@ -23,6 +23,7 @@ defmodule Core.Match do
       acc ++ [match.user] ++ [match.friend]
     end)
     |> Enum.reject(&(&1.id == user.id))
+    |> Enum.uniq()
   end
 
   @spec get(Db.Model.User.t()) :: Db.Model.User.t() | nil
