@@ -34,6 +34,7 @@ defmodule Db.Initialize do
         doordash_url: doordash_url
       }
     end)
+    |> Stream.map(&scrub/1)
     |> Enum.each(fn param ->
       Db.Repo.insert!(struct(Db.Model.Restaurant, param), on_conflict: :nothing)
     end)
@@ -57,6 +58,15 @@ defmodule Db.Initialize do
     |> Enum.each(fn param ->
       Db.Repo.insert!(struct(Db.Model.Dish, param), on_conflict: :nothing)
     end)
+  end
+
+  defp scrub(params) do
+    Stream.map(params, fn
+      {k, ""} -> {k, nil}
+      {k, " "} -> {k, nil}
+      pair -> pair
+    end)
+    |> Stream.into(%{})
   end
 
   defp priv_dir(app), do: "#{:code.priv_dir(app)}"
