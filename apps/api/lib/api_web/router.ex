@@ -29,5 +29,6 @@ defmodule ApiWeb.Router do
     get "/users/dishes", DishController, :list
     post "/users/dishes/action", DishActionController, :create
     get "/users/friends", UserController, :index
+    get "/users/friends/likes", LikeController, :index
   end
 end

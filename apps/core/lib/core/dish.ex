@@ -16,14 +16,12 @@ defmodule Core.Dish do
 
   @spec list(Db.Model.User.t()) :: [Db.Model.Dish.t()]
   def list(user) do
-    dish_ids = get_dish_ids(user.id)
-    friend_dish_ids = get_dish_ids(user.friend_id)
-    friend_rest_ids = get_restaurant_ids(user.friend_id)
+    dishes = list()
+    liked_dish_ids = get_dish_ids(user.id)
 
-    list()
-    |> Enum.reject(fn dish -> Enum.any?(dish_ids, &(&1 == dish.id)) end)
-    |> add_dish_matches(friend_dish_ids)
-    |> add_restaurant_matches(friend_rest_ids)
+    Enum.reject(dishes, fn dish ->
+      Enum.any?(liked_dish_ids, &(&1 == dish.id))
+    end)
   end
 
   @spec get_likes(Db.Model.User.t()) :: [Db.Model.Dish.t()]
