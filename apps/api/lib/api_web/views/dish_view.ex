@@ -7,6 +7,8 @@ defmodule ApiWeb.DishView do
         id: dish.id,
         name: dish.name,
         type: dish.type,
+        category: dish.category,
+        tags: dish.tags,
         image_url: dish.image_url,
         match: dish.match,
         restaurant_id: dish.restaurant.id,

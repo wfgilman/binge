@@ -1,42 +1,41 @@
-Restaurant,Dish,Image URL,Type
-Plucked Chicken & Beer,Tweety Bird,https://s3-media0.fl.yelpcdn.com/bphoto/3pLbcMY1-ThD_96f2Pb9aw/o.jpg,Sandwich
-Plucked Chicken & Beer,Sticky Chicky,https://s3-media0.fl.yelpcdn.com/bphoto/bkZBfyQxL5poaAB8qzDnMw/o.jpg,Sandwich
-Plucked Chicken & Beer,Chicken & Waffle,https://s3-media0.fl.yelpcdn.com/bphoto/lrzVYut5d26m0YEjqyJdEQ/o.jpg,Sandwich
-Plucked Chicken & Beer,Fried Chicken Taco,https://s3-media0.fl.yelpcdn.com/bphoto/PlpvUnXC9aXTwJxPzhLgww/o.jpg,Taco
-Plucked Chicken & Beer,Watermelon Salad,https://s3-media0.fl.yelpcdn.com/bphoto/u8UA8NB8WSQMp7GXwJbmcg/o.jpg,Salad
-Plucked Chicken & Beer,Chicken Tenders,https://s3-media0.fl.yelpcdn.com/bphoto/p77Y8SMmK43h_9XbZ0335Q/o.jpg,Fried Chicken
-Plucked Chicken & Beer,Glazed Donut Holes,https://s3-media0.fl.yelpcdn.com/bphoto/1vY58DX46OTrItRuBX9ulg/o.jpg,Pastry
-Plucked Chicken & Beer,Chicken Wings,https://s3-media0.fl.yelpcdn.com/bphoto/sqIcqplWIWyEQ0-XCRPM0w/o.jpg,Chicken Wings
-Plucked Chicken & Beer,Blueffalo Chicken Fries,https://s3-media0.fl.yelpcdn.com/bphoto/eVzQw9wDI7QISHPrhJRFbQ/o.jpg,Loaded Fries
-1515 Restaurant & Lounge,Street Taco,https://s3-media0.fl.yelpcdn.com/bphoto/AKIj4xK_XsMYki8EU0NV4g/o.jpg,Taco
-1515 Restaurant & Lounge,Tiramisu,https://s3-media0.fl.yelpcdn.com/bphoto/pRMvIHN8CWQ6ORieU_gfMg/o.jpg,Dessert
-1515 Restaurant & Lounge,Dozen Oysters,https://s3-media0.fl.yelpcdn.com/bphoto/_xTF-NQKQCimt33td9IGuA/o.jpg,Shellfish
-1515 Restaurant & Lounge,Spicy Mussels,https://s3-media0.fl.yelpcdn.com/bphoto/epGqJ_RoaOpLn1yUD8VisQ/o.jpg,Shellfish
-1515 Restaurant & Lounge,Brussel Sprouts,https://s3-media0.fl.yelpcdn.com/bphoto/PqZSlIpAHylhLh3_QD8QbQ/o.jpg,Vegetable
-1515 Restaurant & Lounge,Fried Calamari,https://s3-media0.fl.yelpcdn.com/bphoto/neJ3Cqk2WDeo9ypljEP3FQ/o.jpg,Seafood
-1515 Restaurant & Lounge,Lamb Chops,https://s3-media0.fl.yelpcdn.com/bphoto/LpmGbvYvZsZjyjt0lw77Ww/o.jpg,Lamb
-Bounty Hunter Wine Bar & Smoking BBQ,Combo Platter,https://s3-media0.fl.yelpcdn.com/bphoto/1AUS-ANn58U55kEiLV5BzA/o.jpg,BBQ
-Bounty Hunter Wine Bar & Smoking BBQ,Corn on Cob,https://s3-media0.fl.yelpcdn.com/bphoto/swa0vf0F9KQit7Wufq3hkQ/o.jpg,Vegetable
-Bounty Hunter Wine Bar & Smoking BBQ,Beer Can Chicken,https://s3-media0.fl.yelpcdn.com/bphoto/7oP66RxOHSPoLM9n5Hmt1w/o.jpg,Chicken
-Bounty Hunter Wine Bar & Smoking BBQ,Pork Ribs,https://s3-media0.fl.yelpcdn.com/bphoto/HPh2E3MTngHNlqkmN1ZlCA/o.jpg,Pork Ribs
-Bounty Hunter Wine Bar & Smoking BBQ,Market Salad,https://s3-media0.fl.yelpcdn.com/bphoto/Zncxn63OtaXtXTlJqGYuxA/o.jpg,Salad
-Bounty Hunter Wine Bar & Smoking BBQ,Charcuterie Platter,https://s3-media0.fl.yelpcdn.com/bphoto/YLZe1Ql4XO1Y7nOhliRKcg/o.jpg,Charcuterie
-Broderick Roadhouse,Chopped Cobb Salad,https://s3-media0.fl.yelpcdn.com/bphoto/1jOXmDa-EJjl6P3X00zQVQ/o.jpg,Salad
-Broderick Roadhouse,Breakfast Fries,https://s3-media0.fl.yelpcdn.com/bphoto/E0Cd9afk3scDN5Hwj5BYpA/o.jpg,Loaded Fries
-Broderick Roadhouse,Banh Mi Fries,https://s3-media0.fl.yelpcdn.com/bphoto/HApXlMEZhbZLPcGge4s7gQ/o.jpg,Loaded Fries
-Broderick Roadhouse,Jumbo Wings,https://s3-media0.fl.yelpcdn.com/bphoto/ZRXUTIk1CyUmFvj0GTG_GA/o.jpg,Chicken Wings
-Broderick Roadhouse,Buffalo Cauliflower,https://s3-media0.fl.yelpcdn.com/bphoto/jSdgtVAO8kEzU2rzWux1bQ/o.jpg,Vegetable
-Broderick Roadhouse,Chicken & Waffle,https://s3-media0.fl.yelpcdn.com/bphoto/OB7EwgdugfFD1nbV-XFazQ/o.jpg,Chicken & Waffle
-Broderick Roadhouse,Johnny Cash Burger,https://s3-media0.fl.yelpcdn.com/bphoto/VPGHTa08P6FoV938c621ug/o.jpg,Burger
-Broderick Roadhouse,Avacado Toast,https://s3-media0.fl.yelpcdn.com/bphoto/fK_fa1_7Vt38QMpJBQjRaQ/o.jpg,Avacado Toast
-Broderick Roadhouse,Bacon Mac and Cheese,https://s3-media0.fl.yelpcdn.com/bphoto/F8Bu5Hlg5wf-OhV0bAkgOg/o.jpg,Mac and Cheese
-Broderick Roadhouse,Duck Burger,https://s3-media0.fl.yelpcdn.com/bphoto/7euFPqlXTvhH0_hBFPW-og/o.jpg,Burger
-Broderick Roadhouse,Steak Salad,https://s3-media0.fl.yelpcdn.com/bphoto/QSO_3b5pbH6zc1X5TxCaIQ/o.jpg,Salad
-Broderick Roadhouse,Voodoo Cookie Sandwich,https://s3-media0.fl.yelpcdn.com/bphoto/ztT-p0yf5mEgMIfOqlm3-g/o.jpg,Dessert
-Broderick Roadhouse,Country Fried Steak,https://s3-media0.fl.yelpcdn.com/bphoto/QTT0xr43UHPgdQaX_iSAKw/o.jpg,Breakfast
-Broderick Roadhouse,Gold Rush Burger,https://s3-media0.fl.yelpcdn.com/bphoto/0sTjWdSPQ3AR5qnmDMJjVQ/o.jpg,Burger
-Broderick Roadhouse,Banh Mi Taco,https://s3-media0.fl.yelpcdn.com/bphoto/s7nRlpoA9iIzRQqWm4hgCg/o.jpg,Taco
-Broderick Roadhouse,Fish Taco,https://s3-media0.fl.yelpcdn.com/bphoto/r2oPHGXwVlunFbTdyrd0UQ/o.jpg,Taco
-Coffee Shop,Margherita with Prosciutto Flatbread,https://s3-media0.fl.yelpcdn.com/bphoto/tZDulgYLlvuOL2BFAx1-Jw/o.jpg,Flat Bread
-Coffee Shop,Farm Fresh Egg White Sandwich,https://s3-media0.fl.yelpcdn.com/bphoto/gIRqon3k4ThFymeIuZfjig/o.jpg,Breakfast Sandwich
-Coffee Shop,Avacado Smash,https://s3-media0.fl.yelpcdn.com/bphoto/dhIJ0fSP2oORhpM91sFo9w/o.jpg,Avacado Toast
+Restaurant,Dish,Image URL,Type,Category,Tags
+Plucked Chicken & Beer,Tweety Bird,https://s3-media0.fl.yelpcdn.com/bphoto/3pLbcMY1-ThD_96f2Pb9aw/o.jpg,Sandwich,American,chicken sandwich lunch
+Plucked Chicken & Beer,Sticky Chicky,https://s3-media0.fl.yelpcdn.com/bphoto/bkZBfyQxL5poaAB8qzDnMw/o.jpg,Sandwich,American,chicken sandwich lunch
+Plucked Chicken & Beer,Chicken & Waffle,https://s3-media0.fl.yelpcdn.com/bphoto/lrzVYut5d26m0YEjqyJdEQ/o.jpg,Sandwich,American,fried chicken waffle breakfast
+Plucked Chicken & Beer,Fried Chicken Taco,https://s3-media0.fl.yelpcdn.com/bphoto/PlpvUnXC9aXTwJxPzhLgww/o.jpg,Taco,Mexican,taco fried chicken
+Plucked Chicken & Beer,Watermelon Salad,https://s3-media0.fl.yelpcdn.com/bphoto/u8UA8NB8WSQMp7GXwJbmcg/o.jpg,Salad,American,salad fruit vegetarian
+Plucked Chicken & Beer,Chicken Tenders,https://s3-media0.fl.yelpcdn.com/bphoto/p77Y8SMmK43h_9XbZ0335Q/o.jpg,Fried Chicken,American,chicken
+Plucked Chicken & Beer,Glazed Donut Holes,https://s3-media0.fl.yelpcdn.com/bphoto/1vY58DX46OTrItRuBX9ulg/o.jpg,Pastry,American,dessert donut
+Plucked Chicken & Beer,Blueffalo Chicken Fries,https://s3-media0.fl.yelpcdn.com/bphoto/eVzQw9wDI7QISHPrhJRFbQ/o.jpg,Loaded Fries,American,fries chicken
+1515 Restaurant & Lounge,Street Taco,https://s3-media0.fl.yelpcdn.com/bphoto/AKIj4xK_XsMYki8EU0NV4g/o.jpg,Taco,Mexican,beef taco
+1515 Restaurant & Lounge,Tiramisu,https://s3-media0.fl.yelpcdn.com/bphoto/pRMvIHN8CWQ6ORieU_gfMg/o.jpg,Dessert,American,dessert
+1515 Restaurant & Lounge,Dozen Oysters,https://s3-media0.fl.yelpcdn.com/bphoto/_xTF-NQKQCimt33td9IGuA/o.jpg,Shellfish,American,seafood oyster
+1515 Restaurant & Lounge,Spicy Mussels,https://s3-media0.fl.yelpcdn.com/bphoto/epGqJ_RoaOpLn1yUD8VisQ/o.jpg,Shellfish,American,seafood
+1515 Restaurant & Lounge,Brussel Sprouts,https://s3-media0.fl.yelpcdn.com/bphoto/PqZSlIpAHylhLh3_QD8QbQ/o.jpg,Vegetable,American,salad vegetarian
+1515 Restaurant & Lounge,Fried Calamari,https://s3-media0.fl.yelpcdn.com/bphoto/neJ3Cqk2WDeo9ypljEP3FQ/o.jpg,Seafood,American,seafood calamari
+1515 Restaurant & Lounge,Lamb Chops,https://s3-media0.fl.yelpcdn.com/bphoto/LpmGbvYvZsZjyjt0lw77Ww/o.jpg,Lamb,American,lamb
+Bounty Hunter Wine Bar & Smoking BBQ,Combo Platter,https://s3-media0.fl.yelpcdn.com/bphoto/1AUS-ANn58U55kEiLV5BzA/o.jpg,BBQ,American,bbq brisket ribs
+Bounty Hunter Wine Bar & Smoking BBQ,Corn on Cob,https://s3-media0.fl.yelpcdn.com/bphoto/swa0vf0F9KQit7Wufq3hkQ/o.jpg,Vegetable,American,vegetarian
+Bounty Hunter Wine Bar & Smoking BBQ,Beer Can Chicken,https://s3-media0.fl.yelpcdn.com/bphoto/7oP66RxOHSPoLM9n5Hmt1w/o.jpg,Chicken,American,chicken
+Bounty Hunter Wine Bar & Smoking BBQ,Pork Ribs,https://s3-media0.fl.yelpcdn.com/bphoto/HPh2E3MTngHNlqkmN1ZlCA/o.jpg,Pork Ribs,American,pork ribs
+Bounty Hunter Wine Bar & Smoking BBQ,Market Salad,https://s3-media0.fl.yelpcdn.com/bphoto/Zncxn63OtaXtXTlJqGYuxA/o.jpg,Salad,American,salad vegetarian
+Bounty Hunter Wine Bar & Smoking BBQ,Charcuterie Platter,https://s3-media0.fl.yelpcdn.com/bphoto/YLZe1Ql4XO1Y7nOhliRKcg/o.jpg,Charcuterie,American,charcuterie
+Broderick Roadhouse,Chopped Cobb Salad,https://s3-media0.fl.yelpcdn.com/bphoto/1jOXmDa-EJjl6P3X00zQVQ/o.jpg,Salad,American,salad
+Broderick Roadhouse,Breakfast Fries,https://s3-media0.fl.yelpcdn.com/bphoto/E0Cd9afk3scDN5Hwj5BYpA/o.jpg,Loaded Fries,American,fries breakfast
+Broderick Roadhouse,Banh Mi Fries,https://s3-media0.fl.yelpcdn.com/bphoto/HApXlMEZhbZLPcGge4s7gQ/o.jpg,Loaded Fries,American,fries vietnamese pork
+Broderick Roadhouse,Jumbo Wings,https://s3-media0.fl.yelpcdn.com/bphoto/ZRXUTIk1CyUmFvj0GTG_GA/o.jpg,Chicken Wings,American,chicken wings
+Broderick Roadhouse,Buffalo Cauliflower,https://s3-media0.fl.yelpcdn.com/bphoto/jSdgtVAO8kEzU2rzWux1bQ/o.jpg,Vegetable,American,vegetarian
+Broderick Roadhouse,Chicken & Waffle,https://s3-media0.fl.yelpcdn.com/bphoto/OB7EwgdugfFD1nbV-XFazQ/o.jpg,Chicken & Waffle,American,fried chicken waffle breakfast
+Broderick Roadhouse,Johnny Cash Burger,https://s3-media0.fl.yelpcdn.com/bphoto/VPGHTa08P6FoV938c621ug/o.jpg,Burger,American,burger
+Broderick Roadhouse,Avacado Toast,https://s3-media0.fl.yelpcdn.com/bphoto/fK_fa1_7Vt38QMpJBQjRaQ/o.jpg,Avacado Toast,American,vegetarian breakfast
+Broderick Roadhouse,Bacon Mac and Cheese,https://s3-media0.fl.yelpcdn.com/bphoto/F8Bu5Hlg5wf-OhV0bAkgOg/o.jpg,Mac and Cheese,American,bacon
+Broderick Roadhouse,Duck Burger,https://s3-media0.fl.yelpcdn.com/bphoto/7euFPqlXTvhH0_hBFPW-og/o.jpg,Burger,American,burger
+Broderick Roadhouse,Steak Salad,https://s3-media0.fl.yelpcdn.com/bphoto/QSO_3b5pbH6zc1X5TxCaIQ/o.jpg,Salad,American,salad steak
+Broderick Roadhouse,Voodoo Cookie Sandwich,https://s3-media0.fl.yelpcdn.com/bphoto/ztT-p0yf5mEgMIfOqlm3-g/o.jpg,Dessert,American,dessert
+Broderick Roadhouse,Country Fried Steak,https://s3-media0.fl.yelpcdn.com/bphoto/QTT0xr43UHPgdQaX_iSAKw/o.jpg,Breakfast,American,steak breakfast
+Broderick Roadhouse,Gold Rush Burger,https://s3-media0.fl.yelpcdn.com/bphoto/0sTjWdSPQ3AR5qnmDMJjVQ/o.jpg,Burger,American,burger
+Broderick Roadhouse,Banh Mi Taco,https://s3-media0.fl.yelpcdn.com/bphoto/s7nRlpoA9iIzRQqWm4hgCg/o.jpg,Taco,American,taco vietnamese
+Broderick Roadhouse,Fish Taco,https://s3-media0.fl.yelpcdn.com/bphoto/r2oPHGXwVlunFbTdyrd0UQ/o.jpg,Taco,American,fish taco seafood
+Coffee Shop,Margherita with Prosciutto Flatbread,https://s3-media0.fl.yelpcdn.com/bphoto/tZDulgYLlvuOL2BFAx1-Jw/o.jpg,Flat Bread,Italian,pizza
+Coffee Shop,Farm Fresh Egg White Sandwich,https://s3-media0.fl.yelpcdn.com/bphoto/gIRqon3k4ThFymeIuZfjig/o.jpg,Breakfast Sandwich,American,breakfast sandwich
+Coffee Shop,Avacado Smash,https://s3-media0.fl.yelpcdn.com/bphoto/dhIJ0fSP2oORhpM91sFo9w/o.jpg,Avacado Toast,American,vegetarian breakfast

@@ -47,12 +47,14 @@ defmodule Db.Initialize do
     |> file_path(:db)
     |> File.stream!()
     |> MyParser.parse_stream()
-    |> Stream.map(fn [restaurant, name, image_url, type] ->
+    |> Stream.map(fn [restaurant, name, image_url, type, category, tags] ->
       %{
         name: name,
         image_url: image_url,
         type: type,
-        restaurant_id: Enum.find(restaurants, &(&1.name == restaurant)).id
+        restaurant_id: Enum.find(restaurants, &(&1.name == restaurant)).id,
+        category: category,
+        tags: tags
       }
     end)
     |> Enum.each(fn param ->
