@@ -13,7 +13,7 @@ defmodule Core.User do
       nil ->
         %Db.Model.User{}
         |> Db.Model.User.changeset(params)
-        |> Db.Repo.insert()
+        |> Db.Repo.insert(returning: true)
 
       %{status: :invited} = user ->
         user
