@@ -26,9 +26,9 @@ defmodule Notify.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_twilio, "~> 0.8.1"},
-      {:pigeon, "~> 1.5.1"},
-      {:kadabra, "~> 0.4.4"}
+      {:ex_twilio, "~> 0.9"},
+      {:pigeon, "~> 1.6.1"},
+      {:kadabra, "~> 0.6.0"}
     ]
   end
 end
