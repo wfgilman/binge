@@ -14,24 +14,22 @@ defmodule Db.Initialize do
     |> File.stream!()
     |> MyParser.parse_stream()
     |> Stream.map(fn [
-                       restaurant,
-                       doordash_url,
-                       _grubhub_url,
-                       _ubereats_url,
-                       _postmates_url,
-                       _caviar_url,
-                       category,
-                       address,
+                       name,
                        phone,
-                       website
+                       address,
+                       website,
+                       doordash_url,
+                       instagram,
+                       filename
                      ] ->
       %{
-        name: restaurant,
-        category: category,
+        name: name,
         address: address,
         phone: phone,
         website: website,
-        doordash_url: doordash_url
+        doordash_url: doordash_url,
+        instagram: instagram,
+        filename: filename
       }
     end)
     |> Stream.map(&scrub/1)
@@ -43,18 +41,25 @@ defmodule Db.Initialize do
   def load_dish do
     restaurants = Db.Repo.all(Db.Model.Restaurant)
 
-    "dishes.csv"
+    "images.csv"
     |> file_path(:db)
     |> File.stream!()
     |> MyParser.parse_stream()
-    |> Stream.map(fn [restaurant, name, image_url, type, category, tags] ->
+    |> Stream.map(fn [filename] ->
+      [restaurant_filename | tail] = String.split(filename, "-")
+      [dish_filename | _] = tail
+
+      dish_name =
+        dish_filename
+        |> String.replace([".jpg", ".jpeg"], "")
+        |> String.split("_")
+        |> capitalize()
+        |> Enum.join(" ")
+
       %{
-        name: name,
-        image_url: image_url,
-        type: type,
-        restaurant_id: Enum.find(restaurants, &(&1.name == restaurant)).id,
-        category: category,
-        tags: tags
+        name: dish_name,
+        image_name: filename,
+        restaurant_id: Enum.find(restaurants, &(&1.filename == restaurant_filename)).id
       }
     end)
     |> Enum.each(fn param ->
@@ -69,6 +74,13 @@ defmodule Db.Initialize do
       pair -> pair
     end)
     |> Stream.into(%{})
+  end
+
+  defp capitalize(list_of_words) do
+    Enum.map(list_of_words, fn word ->
+      skip = ["a", "the", "and", "an", "with", "in"]
+      if word in skip, do: word, else: String.capitalize(word)
+    end)
   end
 
   defp priv_dir(app), do: "#{:code.priv_dir(app)}"

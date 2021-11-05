@@ -55,12 +55,11 @@ defmodule Core.Dish do
   end
 
   defp sort(dishes) do
-    compare =
-      fn
-        x, x -> :eq
-        x, y when x > y -> :gt
-        _, _ -> :lt
-      end
+    compare = fn
+      x, x -> :eq
+      x, y when x > y -> :gt
+      _, _ -> :lt
+    end
 
     Enum.sort(dishes, fn lhs, rhs ->
       case {compare.(lhs.match, rhs.match), compare.(lhs.restaurant.name, rhs.restaurant.name)} do

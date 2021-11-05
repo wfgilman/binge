@@ -6,7 +6,10 @@ defmodule ApiWeb.UserView do
   end
 
   def render("index.json", %{data: friends}) do
-    Enum.map(friends, &user_json/1)
+    %{
+      count: Enum.count(friends),
+      data: Enum.map(friends, &user_json/1)
+    }
   end
 
   defp user_json(nil), do: nil

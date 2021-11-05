@@ -4,8 +4,7 @@ defmodule Db.Repo.Migrations.CreateTableDish do
   def change do
     create table("dish") do
       add :name, :string
-      add :image_url, :string
-      add :type, :string
+      add :image_name, :string
       add :restaurant_id, references(:restaurant)
       timestamps()
     end

@@ -28,7 +28,9 @@ defmodule ApiWeb.UserController do
         conn
         |> put_status(400)
         |> put_view(ApiWeb.ErrorView)
-        |> render("twilio.json", message: resp["message"] || "We couldn't send an invite to that number.")
+        |> render("twilio.json",
+          message: resp["message"] || "We couldn't send an invite to that number."
+        )
     end
   end
 
