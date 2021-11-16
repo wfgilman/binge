@@ -23,7 +23,8 @@ defmodule ApiWeb.DishView do
       website_url: dish.restaurant.website,
       phone: dish.restaurant.phone,
       instagram: dish.restaurant.instagram,
-      ubereats_url: nil
+      ubereats_url: nil,
+      restaurant_address: dish.restaurant.address
     }
   end
 end
