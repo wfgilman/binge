@@ -5,9 +5,9 @@ API supporting iOS app Binge: https://github.com/wfgilman/Binge-iOS
 RESTful JSON webservice featuring:
 - SMS based authentication using JSON webtoken
 - PostgreSQL database
+- AWS S3 hosting of images for over 1,500 dishes across 80 restaurants
 - Erlang Term Store (ETS) cache to quickly identify matches during swiping
 - Automatic expiry of liked dishes from cache
-- AWS S3 hosting of over 1,500 dishes across 80 restaurants
 - iOS Push notifications on dish or restaurant match when perusing with friend
 
 ### Data
